@@ -1,0 +1,22 @@
+[
+    {"District_Name":"Vellore","Date":"02-01-2020","Infected":"1000","Recovered":"500","Vaccinated":"10000"},
+    {"District_Name":"Chennai","Date":"03-01-2020","Infected":"1500","Recovered":"600","Vaccinated":"11000"},
+    {"District_Name":"Ranipet","Date":"04-01-2020","Infected":"750","Recovered":"200","Vaccinated":"14000"},
+    {"District_Name":"Tiruvannamalai","Date":"01-01-2020","Infected":"5000","Recovered":"3400","Vaccinated":"3000"},
+    {"District_Name":"Coimbatore","Date":"01-01-2020","Infected":"3000","Recovered":"2100","Vaccinated":"12000"},
+    {"District_Name":"Trichy","Date":"01-01-2020","Infected":"2500","Recovered":"2200","Vaccinated":"15000"},
+    {"District_Name":"Erode","Date":"01-01-2020","Infected":"2000","Recovered":"1500","Vaccinated":"16000"},
+    {"District_Name":"Nagercoil","Date":"01-01-2020","Infected":"600","Recovered":"350","Vaccinated":"18000"},
+    {"District_Name":"Kanyakumari","Date":"01-01-2020","Infected":"1250","Recovered":"820","Vaccinated":"8000"},
+    {"District_Name":"Ambur","Date":"01-01-2020","Infected":"560","Recovered":"120","Vaccinated":"7000"},
+    {"District_Name":"Vanyambadi","Date":"01-01-2020","Infected":"300","Recovered":"60","Vaccinated":"360"},
+    {"District_Name":"Madurai","Date":"01-01-2020","Infected":"1340","Recovered":"690","Vaccinated":"4500"},
+    {"District_Name":"Viruthunagar","Date":"01-01-2020","Infected":"1234","Recovered":"535","Vaccinated":"12600"},
+    {"District_Name":"Karur","Date":"01-01-2020","Infected":"150","Recovered":"20","Vaccinated":"1840"},
+    {"District_Name":"Perambalur","Date":"01-01-2020","Infected":"400","Recovered":"70","Vaccinated":"1730"},
+    {"District_Name":"Vilupulam","Date":"01-01-2020","Infected":"370","Recovered":"230","Vaccinated":"2230"},
+    {"District_Name":"Kadalur","Date":"01-01-2020","Infected":"760","Recovered":"260","Vaccinated":"2600"},
+    {"District_Name":"Tanjavur","Date":"01-01-2020","Infected":"2670","Recovered":"1345","Vaccinated":"13200"},
+    {"District_Name":"Thiruvarur","Date":"01-01-2020","Infected":"2770","Recovered":"1670","Vaccinated":"14050"},
+    {"District_Name":"Thrunelveli","Date":"01-01-2020","Infected":"3560","Recovered":"1560","Vaccinated":"1850"}
+]
