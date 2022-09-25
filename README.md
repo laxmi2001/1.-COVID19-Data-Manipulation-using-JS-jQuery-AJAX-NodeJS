@@ -1,4 +1,4 @@
-# 1.-COVID19-Data-Manipulation-using-JS-jQuery-AJAX-NodeJS
+# COVID19-Data-Manipulation-using-JS-jQuery-AJAX-NodeJS
 
 ## For this entire website to work, you would need the following 
 ####  a. A local Web server (Apache server from XAMPP)
