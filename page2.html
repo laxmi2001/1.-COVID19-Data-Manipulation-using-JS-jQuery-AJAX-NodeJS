@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title> Data Insertion page </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <style>
+            #data input{
+                width: 800px;
+            }
+            #b1 a{
+                text-decoration: none;
+                color: white;
+            }
+            #buttons{
+                width: max-content;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#sub").click(function(){
+                    var dist = document.getElementById('dist_name').value;
+                    var date = document.getElementById('date').value;
+                    var inf = document.getElementById('inf').value;
+                    var rec = document.getElementById('rec').value;
+                    var vac = document.getElementById('vac').value;
+                    d1={"District_Name":dist,"Date":date,"Infected":inf,"Recovered":rec,"Vaccinated":vac};
+                    $.ajax({url:"http://localhost:5500/covid19/adddetails",
+                        type:"POST",
+                        data:d1,
+                        dataType:'json',
+                        success:function(res){
+                            var table = document.getElementById("verify");
+                            var row = table.insertRow(1);
+                            var cell0 = row.insertCell(0);
+                            var cell1 = row.insertCell(1);
+                            var cell2 = row.insertCell(2);
+                            var cell3 = row.insertCell(3);
+                            var cell4 = row.insertCell(4);
+                            cell0.innerHTML = dist;
+                            cell1.innerHTML = date;
+                            cell2.innerHTML = inf;
+                            cell3.innerHTML = rec;
+                            cell4.innerHTML = vac;
+                        }
+                    }); 
+                    document.getElementById("data").reset();
+                });
+            })
+        </script>
+    </head>
+    <h1> Fill in your District's data </h1>
+    <form id="data">
+        <input type="text" id="dist_name" placeholder="District Name">
+        <input type="date" id="date" placeholder="Date">
+        <input type="number" id="inf" placeholder="Infected">
+        <input type="number" id="rec" placeholder="Recovered">
+        <input type="number" id="vac" placeholder="Vaccinated">
+    </form>
+    <center><div id="buttons">
+        <input type="reset" id="sub" value="Click here to submit data">
+        <button id="b1"><a href="page1.html"> Click here to go back to home page </a></button>
+    </div></center> 
+    <center>
+        <table id="verify">
+            <tr>
+                <th> District Name </th>
+                <th> Date </th>
+                <th> Infected </th>
+                <th> Recovered </th>
+                <th> Vaccinated </th>
+            </tr>
+        </table>
+    </center>
+</html>
