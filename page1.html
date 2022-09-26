@@ -18,6 +18,7 @@
         <script>
         $(document).ready(function(){
             $("#b1").click(function(){
+                $("table td").remove();
                 $.getJSON({url:"http://localhost:5500/covid19/showdetails",success:function(resp){
                     var table = document.getElementById("table");
                     for(i = 0; i < resp.length; i++){
@@ -35,16 +36,6 @@
                     }
                 }});
             });
-            // $("#b3").click(function(){
-            //     $.getJSON({url: "http://localhost:5500/covid19/showdetails",success:function(resp){
-            //         let text = "";
-            //         for(i = 0; i < resp.length; i++){
-            //             text = text + (resp[i].Infected + "\r\n" +resp[i].District_Name);
-            //             text = text + "\r\n";                    
-            //         }
-            //         $("#div1").html(text);
-            //     }});
-            // });
             $("#bs1").click(function(){
                 $.getJSON({url: "http://localhost:5500/covid19/showdetails",success:function(resp){
                     // Function to sort names - 
@@ -161,8 +152,9 @@
                 }});
             });        
             $("#b2").click(function(){
+                $("table td").remove();
                 $.getJSON({url: "http://localhost:5500/covid19/showdetails",success:function(resp){
-                    // Function to sort Vaccinated - 
+                    // Function to sort and display Top 10 Vaccinated Districts - 
                     resp.sort((a, b) => b.Vaccinated - a.Vaccinated);              
                     var table = document.getElementById("table");                    
                     for(j = 0; j < 10 ; j++){
