@@ -17,8 +17,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
+            $("#table").hide();
+            $("#table1").hide();
             $("#b1").click(function(){
-                $("table td").remove();
+                $("#table").show();
+                $("#table td").remove();
+                $("#table1").hide();
                 $.getJSON({url:"http://localhost:5500/covid19/showdetails",success:function(resp){
                     var table = document.getElementById("table");
                     for(i = 0; i < resp.length; i++){
@@ -152,11 +156,13 @@
                 }});
             });        
             $("#b2").click(function(){
-                $("table td").remove();
+                $("#table").hide();
+                $("#table1").show();
+                $("#table1 td").remove();
                 $.getJSON({url: "http://localhost:5500/covid19/showdetails",success:function(resp){
-                    // Function to sort and display Top 10 Vaccinated Districts - 
+                    // Function to sort Vaccinated - 
                     resp.sort((a, b) => b.Vaccinated - a.Vaccinated);              
-                    var table = document.getElementById("table");                    
+                    var table = document.getElementById("table1");                    
                     for(j = 0; j < 10 ; j++){
                         var row = table.insertRow(j+1);
                         var cell0 = row.insertCell(0);
@@ -192,6 +198,15 @@
                     <th id="bs3"> Infected </th>
                     <th id="bs4"> Recovered </th>
                     <th id="bs5"> Vaccinated </th>
+                </tr>
+            </table>
+            <table id="table1">
+                <tr>
+                    <th> District Name </th>
+                    <th> Date </th>
+                    <th> Infected </th>
+                    <th> Recovered </th>
+                    <th> Vaccinated </th>
                 </tr>
             </table>
         </center>        
